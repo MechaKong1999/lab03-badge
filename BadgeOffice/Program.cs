@@ -30,6 +30,33 @@ Random rng = new Random();
 int studentNumber = rng.Next(100000, 1000000);
 int lockerNumber = rng.Next(1, 501);
 
+Console.WriteLine("What is the dorm's X coord? ");
+double dormXCoord = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("What is the dorm's Y coord? ");
+double dormYCoord = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("What is the classroom's X coord? ");
+double classXCoord = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("What is the classroom's Y coord? ");
+double classYCoord = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("What is your walking speed in feet per second? ");
+double walkingSpeed = Convert.ToDouble(Console.ReadLine());
+
+double distance1 = Math.Pow(classXCoord, 2) + Math.Pow(dormXCoord, 2);
+double distance2 = Math.Pow(classYCoord, 2) + Math.Pow(dormYCoord, 2);
+double distanceFinal = Math.Sqrt(distance1 + distance2);
+Double trueDistance = Math.Round(distanceFinal, 1);
+
+double time = distanceFinal / walkingSpeed;
+
+int timeInt = Convert.ToInt32(time);
+
+int timeMinutes = timeInt / 60;
+int timeSeconds = timeInt % 60;
+
 Console.WriteLine("Name on badge: " + firstName + " " + lastName);
 Console.WriteLine("Username: " + username3 + username2);
 Console.WriteLine("Initials: " + initials1 + "." + initials3 + ".");
@@ -37,6 +64,10 @@ Console.WriteLine("Letters in last name: " + nameNumber);
 Console.WriteLine(" ");
 Console.WriteLine("student ID: " + studentNumber);
 Console.WriteLine("Locker: " + lockerNumber);
+Console.WriteLine(" ");
+Console.WriteLine("Distance: " + trueDistance);
+Console.WriteLine("Walk Time: " + timeMinutes + " Minutes " + timeSeconds + " Seconds");
+
 
 Console.WriteLine("========================================");
 Console.WriteLine("           ETSU STUDENT BADGE           ");
