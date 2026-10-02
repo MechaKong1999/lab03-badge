@@ -65,6 +65,12 @@ Console.WriteLine(" ");
 Console.WriteLine("student ID: " + studentNumber);
 Console.WriteLine("Locker: " + lockerNumber);
 Console.WriteLine(" ");
+Console.WriteLine("Dorm X Coords: " + dormXCoord);
+Console.WriteLine("Dorm Y Coords: " + dormYCoord);
+Console.WriteLine("Class X Coords: " + classXCoord);
+Console.WriteLine("Class X Coords: " + classYCoord);
+Console.WriteLine("Walking Speed: " + walkingSpeed);
+Console.WriteLine(" ");
 Console.WriteLine("Distance: " + trueDistance);
 Console.WriteLine("Walk Time: " + timeMinutes + " Minutes " + timeSeconds + " Seconds");
 
