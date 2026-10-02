@@ -45,8 +45,8 @@ double classYCoord = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("What is your walking speed in feet per second? ");
 double walkingSpeed = Convert.ToDouble(Console.ReadLine());
 
-double distance1 = Math.Pow(classXCoord, 2) + Math.Pow(dormXCoord, 2);
-double distance2 = Math.Pow(classYCoord, 2) + Math.Pow(dormYCoord, 2);
+double distance1 = Math.Pow(classXCoord, 2) - Math.Pow(dormXCoord, 2);
+double distance2 = Math.Pow(classYCoord, 2) - Math.Pow(dormYCoord, 2);
 double distanceFinal = Math.Sqrt(distance1 + distance2);
 Double trueDistance = Math.Round(distanceFinal, 1);
 
@@ -68,7 +68,29 @@ Console.WriteLine(" ");
 Console.WriteLine("Distance: " + trueDistance);
 Console.WriteLine("Walk Time: " + timeMinutes + " Minutes " + timeSeconds + " Seconds");
 
+string nameBadge = "NAME";
+string marginsName = nameBadge.PadRight(10);
+
+string usernameBadge = "USERNAME";
+string userMargins = usernameBadge.PadRight(10);
+
+string IDBadge = "ID";
+string IDMargins = IDBadge.PadRight(10);
+
+string lockerBadge = "LOCKER";
+string lockerMargins = lockerBadge.PadRight(10);
+
+string walkBadge = "WALK";
+string walkMargins = walkBadge.PadRight(10);
+
+int checkDigit = studentNumber / 9;
 
 Console.WriteLine("========================================");
 Console.WriteLine("           ETSU STUDENT BADGE           ");
+Console.WriteLine("========================================");
+Console.WriteLine(marginsName + fullName);
+Console.WriteLine(userMargins + username3 + username2);
+Console.WriteLine(IDMargins + studentNumber + "-" + checkDigit);
+Console.WriteLine(lockerMargins + lockerNumber);
+Console.WriteLine(walkMargins + timeMinutes + " min " + timeSeconds + " sec");
 Console.WriteLine("========================================");
