@@ -83,7 +83,7 @@ string lockerMargins = lockerBadge.PadRight(10);
 string walkBadge = "WALK";
 string walkMargins = walkBadge.PadRight(10);
 
-int checkDigit = studentNumber / 9;
+int checkDigit = studentNumber % 9;
 
 Console.WriteLine("========================================");
 Console.WriteLine("           ETSU STUDENT BADGE           ");
